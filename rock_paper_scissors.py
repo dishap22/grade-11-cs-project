@@ -1,30 +1,6 @@
-from multiprocessing import parent_process
 import random
 print()
 print("Welcome!")
-
-# Defining cases
-
-'''if comp == user:
-    print('Both, the computer and you have entered the same.')
-    
-elif comp == "rock" and user == "scissor":
-    print('The computer has won. Better luck next time.')
-    
-elif comp == "rock" and user == "paper":
-    print('You have won this round. Congratulations!')
-    
-elif comp == "paper" and user == "rock":
-    print('The computer has won. Better luck next time.')
-    
-elif comp == "paper" and user == "scissor":
-    print('You have won this round. Congratulations!')
-        
-elif comp == "scissor" and user == "paper":
-    print('The computer has won. Better luck next time.')
-
-elif comp == "scissor" and user == "rock":
-    print('You have won this round. Congratulations!')'''
 
 # Defining game if vs. computer
 
@@ -38,6 +14,22 @@ def computerGame():
     # Computer choices
     computerOptions = ["rock", "paper", "scissors"]
     computerChoice = random.choice(computerOptions)
+
+    # Defining conditions
+    if computerOptions == user:
+        print("Draw!")
+    elif computerOptions == "rock" and user == "scissor":
+        print('Computer wins!')
+    elif computerOptions == "rock" and user == "paper":
+        print('You win!')
+    elif computerOptions == "paper" and user == "rock":
+        print('Computer wins!')
+    elif computerOptions == "paper" and user == "scissor":
+        print('You win!')
+    elif computerOptions == "scissor" and user == "paper":
+        print('Computer wins!')
+    elif computerOptions == "scissor" and user == "rock":
+        print('You win!')
 
 
 # Defining game if vs. second player
@@ -60,13 +52,14 @@ def twoPlayerGame():
     elif user1 == "rock" and user2 == "paper":
         print('User 2 wins!')
     elif user1 == "paper" and user2 == "rock":
-        print('User 1 wins!')  
+        print('User 1 wins!')
     elif user1 == "paper" and user2 == "scissor":
-        print('User 2 wins!')      
+        print('User 2 wins!')
     elif user1 == "scissor" and user2 == "paper":
         print('User 1 wins!')
     elif user1 == "scissor" and user2 == "rock":
         print('User 2 wins!')
+
 
 # Rules of the game
 print("Ways of winning the game : \n" + "Rock vs Paper => Paper \n" +
