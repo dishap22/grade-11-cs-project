@@ -52,6 +52,25 @@ def twoPlayerGame():
     user2 = answer.lower()
     print("User 2 chose", answer)
 
+    if user1 == user2:
+        print("Draw!")
+    elif user1 == "rock" and user2 == "scissor":
+        print('User 1 wins!')
+    
+    elif user1 == "rock" and user2 == "paper":
+        print('User 2 wins!')
+    
+    elif user1 == "paper" and user2 == "rock":
+        print('User 1 wins!')
+        
+    elif user1 == "paper" and user2 == "scissor":
+        print('User 2 wins!')
+            
+    elif user1 == "scissor" and user2 == "paper":
+        print('User 1 wins!')
+
+    elif user1 == "scissor" and user2 == "rock":
+        print('User 2 wins!')
 
 # Rules of the game
 print("Ways of winning the game : \n" + "Rock vs Paper => Paper \n" +
