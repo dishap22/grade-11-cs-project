@@ -16,27 +16,29 @@ def computerGame():
     # Defining conditions
     if computerChoice == user:
         print("Draw!")
-    elif computerChoice == "rock" and user == "scissor":
+    elif computerChoice == "rock" and user == "scissors":
         print('Computer wins!')
     elif computerChoice == "rock" and user == "paper":
         print('You win!')
     elif computerChoice == "paper" and user == "rock":
         print('Computer wins!')
-    elif computerChoice == "paper" and user == "scissor":
+    elif computerChoice == "paper" and user == "scissors":
         print('You win!')
-    elif computerChoice == "scissor" and user == "paper":
+    elif computerChoice == "scissors" and user == "paper":
         print('Computer wins!')
-    elif computerChoice == "scissor" and user == "rock":
+    elif computerChoice == "scissors" and user == "rock":
         print('You win!')
 
 
 # Defining game if vs. second player
 def twoPlayerGame():
     # User 1 input
-    answer = input("Please enter rock, paper or scissors.")
+    answer = input("Please enter [rock], [paper] or [scissors].")
     user1 = answer.lower()
     print("User 1 chose", answer)
-
+    print()
+    print()
+    
     # User 2 input
     answer = input("Please enter rock, paper or scissors.")
     user2 = answer.lower()
@@ -45,17 +47,17 @@ def twoPlayerGame():
     # Defining conditions
     if user1 == user2:
         print("Draw!")
-    elif user1 == "rock" and user2 == "scissor":
+    elif user1 == "rock" and user2 == "scissors":
         print('User 1 wins!')
     elif user1 == "rock" and user2 == "paper":
         print('User 2 wins!')
     elif user1 == "paper" and user2 == "rock":
         print('User 1 wins!')
-    elif user1 == "paper" and user2 == "scissor":
+    elif user1 == "paper" and user2 == "scissors":
         print('User 2 wins!')
-    elif user1 == "scissor" and user2 == "paper":
+    elif user1 == "scissors" and user2 == "paper":
         print('User 1 wins!')
-    elif user1 == "scissor" and user2 == "rock":
+    elif user1 == "scissors" and user2 == "rock":
         print('User 2 wins!')
 
 
@@ -68,7 +70,7 @@ print("Ways of winning the game : \n" + "Rock vs Paper => Paper \n" +
 userChoice = input(
     "Enter [1] to play vs. the computer, enter [2] to play with two players")
 
-if userChoice == 2:
+if userChoice == "2":
     twoPlayerGame()
-else:
+elif userChoice == "1":
     computerGame()
