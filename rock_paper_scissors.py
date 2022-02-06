@@ -14,19 +14,19 @@ def computerGame():
     computerChoice = random.choice(computerOptions)
 
     # Defining conditions
-    if computerOptions == user:
+    if computerChoice == user:
         print("Draw!")
-    elif computerOptions == "rock" and user == "scissor":
+    elif computerChoice == "rock" and user == "scissor":
         print('Computer wins!')
-    elif computerOptions == "rock" and user == "paper":
+    elif computerChoice == "rock" and user == "paper":
         print('You win!')
-    elif computerOptions == "paper" and user == "rock":
+    elif computerChoice == "paper" and user == "rock":
         print('Computer wins!')
-    elif computerOptions == "paper" and user == "scissor":
+    elif computerChoice == "paper" and user == "scissor":
         print('You win!')
-    elif computerOptions == "scissor" and user == "paper":
+    elif computerChoice == "scissor" and user == "paper":
         print('Computer wins!')
-    elif computerOptions == "scissor" and user == "rock":
+    elif computerChoice == "scissor" and user == "rock":
         print('You win!')
 
 
