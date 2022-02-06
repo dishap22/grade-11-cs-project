@@ -3,8 +3,6 @@ print()
 print("Welcome!")
 
 # Defining game if vs. computer
-
-
 def computerGame():
     # User input
     answer = input("Please enter rock, paper or scissors.")
