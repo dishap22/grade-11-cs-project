@@ -41,9 +41,6 @@ def display():
         print(currRow)
     print()
 
-
-display()
-
 # Merging one row left
 
 
@@ -219,7 +216,7 @@ while not gameOver:
     validInput = True
 
     # Creating a copy of the board
-    tempBoard = copy.deepcopy(Board)
+    tempBoard = copy.deepcopy(board)
 
     # Figuring out which direction the user wants to merge and the correct function to call
     if move == "d":
