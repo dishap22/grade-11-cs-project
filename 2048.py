@@ -59,9 +59,9 @@ def mergeOneRowL(row):
     # merging everything to the left
     for i in range(boardSize - 1):
         # Testing whether the current value is identical to the next one
-        if row[i] == row[i + 1]
-        row[i] *= 2
-        row[i+1] = 0
+        if row[i] == row[i + 1]:
+            row[i] *= 2
+            row[i+1] = 0
 
     # moving everything to the left
     for i in range(boardSize - 1, 0, -1):
@@ -250,7 +250,7 @@ while not gameOver:
                 gameOver = True
             else:
                 # Add a new value
-            addNewValue()
+                addNewValue()
 
             display()
 
