@@ -66,16 +66,13 @@ def mergeOneRowL(row):
     return row
 
 # merging the entire board to the left
-
-
 def merge_left(currentBoard):
     for i in range(boardSize):
         currentBoard[i] = mergeOneRowL(currentBoard[i])
+    
     return currentBoard
 
 # reversing the order of a row
-
-
 def reverse(row):
     # adding all elements of the row to a new list in reversed order
     new = []
@@ -84,8 +81,6 @@ def reverse(row):
     return new
 
 # merging board right
-
-
 def merge_right(currentBoard):
     # looking at every row
     for i in range(boardSize):
@@ -96,8 +91,6 @@ def merge_right(currentBoard):
     return currentBoard
 
 # Transposing the whole board
-
-
 def transpose(currentBoard):
     for j in range(boardSize):
         for i in range(j, boardSize):
@@ -108,8 +101,6 @@ def transpose(currentBoard):
     return currentBoard
 
 # Merging the board up
-
-
 def merge_up(currentBoard):
     # Transposes the whole board, merges it all left, then transposes it back
     currentBoard = transpose(currentBoard)
@@ -119,8 +110,6 @@ def merge_up(currentBoard):
     return currentBoard
 
 # Merging the board down
-
-
 def merge_down(currentBoard):
     # Transposes the whole board, merges it all right, then transposes it back
     currentBoard = transpose(currentBoard)
@@ -130,8 +119,6 @@ def merge_down(currentBoard):
     return currentBoard
 
 # Pick a new value for the board
-
-
 def pickNewValue():
     if random.randint(1, 8) == 1:
         return 4
@@ -139,8 +126,6 @@ def pickNewValue():
         return 2
 
 # Adding a vaule to the board in the empty space
-
-
 def addNewValue():
     rowNum = random.randint(0, boardSize - 1)
     colNum = random.randint(0, boardSize - 1)
@@ -163,8 +148,6 @@ def won():
     return False
 
 # Checking if the user has lost
-
-
 def noMoves():
     # Creating two copies of the board
     tempBoard1 = copy.deepcopy(board)
