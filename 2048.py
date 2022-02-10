@@ -42,8 +42,6 @@ def display():
     print()
 
 # Merging one row left
-
-
 def mergeOneRowL(row):
     # Move everything to left-most
     for j in range(boardSize-1):
