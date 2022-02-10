@@ -31,7 +31,7 @@ def display():
         for element in row:
             # if element is 0, add a space
             if element == 0:
-                currRow += " " * numSpaces
+                currRow += " " * numSpaces + "|"
                 # if not then we should add the value
             else:
                 currRow += (" " * (numSpaces - len(str(element)))
