@@ -1,4 +1,6 @@
 import random
+import getpass
+from webbrowser import get
 print()
 print("Welcome!")
 
@@ -66,22 +68,24 @@ def computerGame():
 def twoPlayerGame():
     print()
     # User 1 input
-    answer1 = input("User 1 please enter rock, paper or scissors.  ")
+    answer1 = getpass.getpass("User 1 please enter rock, paper or scissors.  ")
     user1 = answer1.lower()
     if user1 not in ["rock", "paper", "scissors"]:
         while user1 not in ["rock", "paper", "scissors"]:
             print("Invalid input.  Please try again.")
-            answer1 = input("User 1 please enter rock, paper or scissors.  ")
+            answer1 = getpass.getpass(
+                "User 1 please enter rock, paper or scissors.  ")
             user1 = answer1.lower()
 
     print()
     # User 2 input
-    answer2 = input("User 2 please enter rock, paper or scissors.  ")
+    answer2 = getpass.getpass("User 2 please enter rock, paper or scissors.  ")
     user2 = answer2.lower()
     if user2 not in ["rock", "paper", "scissors"]:
         while user2 not in ["rock", "paper", "scissors"]:
             print("Invalid input.  Please try again.")
-            answer2 = input("User 2 please enter rock, paper or scissors.  ")
+            answer2 = getpass.getpass(
+                "User 2 please enter rock, paper or scissors.  ")
             user2 = answer2.lower()
 
     print()
