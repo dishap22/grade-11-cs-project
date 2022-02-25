@@ -1,6 +1,5 @@
 import random
 import getpass
-from webbrowser import get
 print()
 print("Welcome!")
 
